@@ -1,6 +1,5 @@
 use axum::{Json, http::StatusCode};
 use crate::models::user_model::{User, CreateUser};
-use std::sync::Arc;
 
 pub async fn create_user(Json(payload): Json<CreateUser>) -> (StatusCode, Json<User>) {
     let user = User {
